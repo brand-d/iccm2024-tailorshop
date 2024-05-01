@@ -1,5 +1,5 @@
-# ICCM2024 - Tailorshop
-=======================
+ICCM2024 - Tailorshop
+=====================
 Companion repository for the 2024 article "Predicting Complex Problem Solving Performance in the Tailorshop Scenario".
 
 ## Overview
@@ -38,7 +38,7 @@ The analysis need the following dependencies in order to run:
 
 ## Run the scripts
 
-Once all dependencies are installed, each script can run directly without arguments.
+Once all dependencies are installed, each script can run directly without arguments. All data files required are already in the data folder, so that running `create_simplified_matrix.py` and `extend_graph.py` beforehand is not necessary.
 In order to run any of the scripts, use the following commands:
 
 ```
