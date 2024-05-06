@@ -26,10 +26,10 @@ df["gender"] = df["gender"].apply(
                .replace("Männlich", "male"))
 
 # Calculate spearmanr for CRT, NFC, Exploration success and before graph sim
-corr_crt = stats.spearmanr(df["CRT correct"], df["ts success"])
-corr_nfc = stats.spearmanr(df["NFC"], df["ts success"])
-corr_exp = stats.spearmanr(df["ts success exploration"], df["ts success"])
-corr_before = stats.spearmanr(df["sim before ts"], df["ts success"])
+corr_crt = stats.spearmanr(df["CRT correct"], df["ts success"], alternative="greater")
+corr_nfc = stats.spearmanr(df["NFC"], df["ts success"], alternative="greater")
+corr_exp = stats.spearmanr(df["ts success exploration"], df["ts success"], alternative="greater")
+corr_before = stats.spearmanr(df["sim before ts"], df["ts success"], alternative="greater")
 
 print("Spearman's r:")
 print("CRT - TS performance:                         r={}, p={}".format(

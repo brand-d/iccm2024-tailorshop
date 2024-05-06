@@ -22,8 +22,8 @@ print("First month strategies: Spearman with final success (ratio of increased c
 # --> Modernize
 first_month["strategy_1"] = \
     first_month[["d1_Machines50", "d1_Machines100", "d1_Workers100",]].apply(strategy1,axis=1)
-success_strat1 = stats.spearmanr(first_month["strategy_1"], first_month["success"])
-profitable_strat1 = stats.spearmanr(first_month["strategy_1"], first_month["profitable"])
+success_strat1 = stats.spearmanr(first_month["strategy_1"], first_month["success"], alternative="greater")
+profitable_strat1 = stats.spearmanr(first_month["strategy_1"], first_month["profitable"], alternative="greater")
 print("Strategy 1 [Success]:     r={}\tp={}".format(
     str(np.round(success_strat1.statistic, 3)).ljust(5, " "),
     str(np.round(success_strat1.pvalue, 3)).ljust(5, " ")))
@@ -37,8 +37,8 @@ print()
 first_month["strategy_2"] = \
     first_month[["d1_MaterialOrder", "d1_MachineService", "d1_WorkerBenefits", "d1_WorkerSalary"]] \
     .apply(strategy2,axis=1)
-success_strat2 = stats.spearmanr(first_month["strategy_2"], first_month["success"])
-profitable_strat2 = stats.spearmanr(first_month["strategy_2"], first_month["profitable"])
+success_strat2 = stats.spearmanr(first_month["strategy_2"], first_month["success"], alternative="greater")
+profitable_strat2 = stats.spearmanr(first_month["strategy_2"], first_month["profitable"], alternative="greater")
 print("Strategy 2 [Success]:     r={}\tp={}".format(
     str(np.round(success_strat2.statistic, 3)).ljust(5, " "),
     str(np.round(success_strat2.pvalue, 3)).ljust(5, " ")))
