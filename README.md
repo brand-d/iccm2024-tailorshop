@@ -16,7 +16,7 @@ Companion repository for the 2024 article "Predicting Complex Problem Solving Pe
 - `analysis/finance_behavior.py`: Plots the financial behavior as pie plots visualizing the expenses, the income and the investments (Figure 3).
 - `analysis/models.py`: Performs the model evaluation.
 - `data`: Contains the datasets used for the analyses.
-- `data/actions.csv`: Contains actions and observable variables for each month and participant.
+- `data/actions.csv`: Contains actions and observable variables for each month and participant. Additionally, expenses, income and investments are provided. To obtain those, we developed and used a [Python implementation](https://github.com/brand-d/pytailorshop) of the Tailorshop scenario by (Danner et al., 2011).
 - `data/knowledge_data.csv`: Contains knowledge graph information and the data obtained by the survey (relevance of variables, CRT, NFC).
 - `data/knowledge_data_extended.csv`: Contains knowledge graph information and the data obtained by the survey (relevance of variables, CRT, NFC) extended with additional information (e.g., similarity of the knowledge graph to the ground truth of the tailorshop, success in the tailorshop, etc).
 - `data/simple_actions_knowledge.csv`: Contains actions and observable variables of the test phase as starting values per month, changes per month as well as second-order changes (changes to the changes). Additionally, the knowledge graph information is added.
@@ -51,3 +51,5 @@ Information will be directly printed to the terminal, plots will be placed in th
 ## References
 
 Brand, D., Todorovikj, S., and Ragni, M. (2024). Predicting Complex Problem Solving Performance in the Tailorshop Scenario. In *Proceedings of the 22th International Conference on Cognitive Modeling*.
+
+Danner, D., Hagemann, D., Holt, D.V., Hager, M., Schankin, A., Wüstenberg. S. & Funke, J. (2011). Measuring Performance in Dynamic Decision Making: Reliability and Validity of the Tailorshop Simulation. *Journal of Individual Differences*, 32, 225-233.
